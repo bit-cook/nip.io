@@ -89,7 +89,7 @@ def _write(*args: str) -> None:
 def _get_next() -> List[str]:
     if _is_debug():
         _log("reading now")
-    line = sys.stdin.readline()
+    line: str = sys.stdin.readline()
     if _is_debug():
         _log(f"read line: {line}")
     return line.strip().split("\t")
